@@ -1,4 +1,1 @@
-body {
-	/*font-family: 'Open Sans', sans-serif;*/
-	font-family: 'Raleway', sans-serif;
-}
+body{font-family:'Raleway',sans-serif}.page-footer{background-color:#59b200}#contenido_principal{margin-top:80px}@media (max-width:400px){#contenido_principal{margin-top:130px}}.nav-extended{background-color:#59b200;display:inline;overflow:hidden;position:fixed;top:0}

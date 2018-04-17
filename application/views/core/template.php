@@ -5,8 +5,10 @@
         <?php $this->load->view('core/header'); ?>
 	</head>
 	<body>
-		<!-- Contenedor principal -->
-        <div>
+        <?php $this->load->view('core/menu'); ?>
+        
+        <!-- Contenedor principal -->
+        <div class="container" id="contenido_principal">
             <!--Se carga el contenido principal -->
             <?php $this->load->view($contenido_principal); ?>
     	</div>

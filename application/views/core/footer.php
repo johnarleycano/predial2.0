@@ -18,8 +18,20 @@
 	</div>
 	<div class="footer-copyright">
 		<div class="container">
-			© 2018 Copyright Devimed S.A. | Versión XXXX
+			© 2018 Copyright Devimed S.A. | Versión <?php echo version(); ?>
 			<a class="grey-text text-lighten-4 right" href="http://devimed.com.co" target="_blank">Página web</a>
 		</div>
 	</div>
 </footer>
+
+<?php
+function version()
+{
+    foreach(array_reverse(glob('.git/refs/tags/*')) as $archivo) {
+        $contents = file_get_contents($archivo);
+
+        return basename($archivo);
+        exit();
+    }
+}
+?>

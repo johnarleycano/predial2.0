@@ -15,12 +15,12 @@
 
 <?php if(ENVIRONMENT === 'production') { ?>
 	<!-- Estilos -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/materialize.min.css" />
 
 	<!-- Scripts -->
 	<script src="<?php echo base_url(); ?>js/materialize.min.js"></script>
 <?php } ?>
 
 <!-- Fuentes -->
-<link rel="stylesheet" href="<?php echo base_url(); ?>css/materialize.min.css" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/estilos.min.css" />

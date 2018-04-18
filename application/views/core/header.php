@@ -5,6 +5,8 @@
 <!-- Título que viene desde el controlador de cada interfaz -->
 <title><?php echo $titulo; ?> | Sistema Predial</title>
 
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
 <?php if(ENVIRONMENT === 'development') { ?>
 	<!-- Estilos -->
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/materialize.css" />

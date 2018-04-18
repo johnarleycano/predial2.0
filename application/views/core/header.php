@@ -9,18 +9,22 @@
 
 <?php if(ENVIRONMENT === 'development') { ?>
 	<!-- Estilos -->
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/datatables.css" />
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/materialize.css" />
 
 	<!-- Scripts -->
 	<script src="<?php echo base_url(); ?>js/materialize.js"></script>
+	<script src="<?php echo base_url(); ?>js/datatables.js"></script>
 <?php } ?>
 
 <?php if(ENVIRONMENT === 'production') { ?>
 	<!-- Estilos -->
+	<link rel="stylesheet" href="<?php echo base_url(); ?>css/datatables.min.css" />
 	<link rel="stylesheet" href="<?php echo base_url(); ?>css/materialize.min.css" />
 
 	<!-- Scripts -->
 	<script src="<?php echo base_url(); ?>js/materialize.min.js"></script>
+	<script src="<?php echo base_url(); ?>js/datatables.min.js"></script>
 <?php } ?>
 
 <!-- Fuentes -->

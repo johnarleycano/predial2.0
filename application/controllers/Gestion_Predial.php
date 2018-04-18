@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('El acceso directo a este archivo no está permitido
  *              predial del sistema
  * Email:       johnarleycano@hotmail.com
  */
-class Gestion_Predial extends CI_Controller {
+class Gestion_predial extends CI_Controller {
 	/**
      * Función constructora de la clase. Se hereda el mismo constructor 
      * de la clase para evitar sobreescribirlo y de esa manera 

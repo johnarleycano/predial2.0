@@ -70,16 +70,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | The $query_builder variables lets you determine whether or not to load
 | the query builder class.
 */
-$active_group = 'mantenimiento';
+$active_group = 'predial';
 $query_builder = TRUE;
 
 // Conexión a la base de datos de mantenimiento
-$db['mantenimiento'] = array(
+$db['predial'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
 	'username' => 'publicador',
 	'password' => 'd3v1m3d',
-	'database' => 'mantenimiento',
+	'database' => 'predial20',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => TRUE,
@@ -103,7 +103,7 @@ $db['configuracion'] = array(
 	'hostname' => 'localhost',
 	'username' => 'publicador',
 	'password' => 'd3v1m3d',
-	'database' => 'predial',
+	'database' => 'configuracion',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

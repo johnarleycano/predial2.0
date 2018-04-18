@@ -14,7 +14,7 @@
 
 	<!-- Scripts -->
 	<script src="<?php echo base_url(); ?>js/materialize.js"></script>
-	<script src="<?php echo base_url(); ?>js/datatables.js"></script>
+	<script src="<?php echo base_url(); ?>js/dataTables/datatables.js"></script>
 <?php } ?>
 
 <?php if(ENVIRONMENT === 'production') { ?>
@@ -24,7 +24,7 @@
 
 	<!-- Scripts -->
 	<script src="<?php echo base_url(); ?>js/materialize.min.js"></script>
-	<script src="<?php echo base_url(); ?>js/datatables.min.js"></script>
+	<script src="<?php echo base_url(); ?>js/dataTables/datatables.min.js"></script>
 <?php } ?>
 
 <!-- Fuentes -->

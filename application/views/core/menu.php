@@ -18,10 +18,10 @@
     </div>
     <div class="nav-content">
         <ul class="tabs tabs-transparent">
-            <li class="tab"><a href="#test2">Inicio</a></li>
-            <li class="tab"><a class="active" href="#test2">Gestión predial</a></li>
-            <li class="tab"><a href="#test1">Gestión Social</a></li>
-            <li class="tab disabled"><a href="#test3">Gestión Ambiental</a></li> <!-- Desactivar cuando no tenga permiso -->
+            <li class="tab"><a href="<?php echo site_url(''); ?>">Inicio</a></li>
+            <li class="tab"><a class="active" href="<?php echo site_url('gestion_predial'); ?>">Gestión predial</a></li>
+            <li class="tab"><a href="<?php echo site_url('gestion_social'); ?>">Gestión Social</a></li>
+            <li class="tab disabled"><a href="<?php echo site_url('gestion_ambiental'); ?>">Gestión Ambiental</a></li> <!-- Desactivar cuando no tenga permiso -->
         </ul>
     </div>
 </nav>

@@ -24,15 +24,27 @@ class Gestion_predial extends CI_Controller {
         $this->load->model(array('gestion_predial_model'));
     }
 
-	/**
+    /**
      * Interfaz inicial
      * 
      * @return [void]
      */
-	function index()
-	{
+    function index()
+    {
         $this->data['titulo'] = 'Gestión predial';
         $this->data['contenido_principal'] = 'gestion_predial/index';
+        $this->load->view('core/template', $this->data);
+    }
+
+	/**
+     * Interfaz para gestión de un predio
+     * 
+     * @return [void]
+     */
+	function predio()
+	{
+        $this->data['titulo'] = 'Gestionar predio';
+        $this->data['contenido_principal'] = 'gestion_predial/predio';
         $this->load->view('core/template', $this->data);
 	}
 

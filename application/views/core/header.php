@@ -27,6 +27,9 @@
 	<script src="<?php echo base_url(); ?>js/dataTables/datatables.min.js"></script>
 <?php } ?>
 
+<!-- Datatables select -->
+<script src="https://cdn.datatables.net/select/1.2.5/js/dataTables.select.min.js"></script>
+<link href="https://cdn.datatables.net/select/1.2.5/css/select.dataTables.min.css" rel="stylesheet">
 <!-- Fuentes -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
 <link rel="stylesheet" href="<?php echo base_url(); ?>css/estilos.min.css" />

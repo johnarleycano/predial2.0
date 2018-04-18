@@ -10,10 +10,10 @@
             <li><a href="collapsible.html">JavaScript</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-            <li><a href="sass.html">Reportes</a></li>
-            <li><a href="badges.html">Documentos</a></li>
-            <li><a href="collapsible.html">Propietarios</a></li>
-            <li><a href="collapsible.html">Pagos</a></li>
+            <li><a href="sass.html"><i class="fas fa-chart-bar"></i> Reportes</a></li>
+            <li><a href="badges.html"><i class="fas fa-file"></i> Documentos</a></li>
+            <li><a href="collapsible.html"><i class="fas fa-users"></i> Propietarios</a></li>
+            <li><a href="collapsible.html"><i class="fas fa-dollar-sign"></i> Pagos</a></li>
         </ul>
     </div>
     <div class="nav-content">

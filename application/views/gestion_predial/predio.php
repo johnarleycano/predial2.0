@@ -13,7 +13,28 @@
 <ul class="collapsible expandable">
 	<li class="active">
 		<div class="collapsible-header"><i class="far fa-lg fa-edit" title="Detalles"></i>&nbsp;&nbsp;Diseño</div>
-		<div class="collapsible-body"><span>Diseño</span></div>
+		<div class="collapsible-body">
+			<div class="row">
+				<form class="col s12">
+					<div class="row">
+						<div class="input-field col s4">
+							<input id="last_name" type="text" class="validate">
+							<label for="last_name">Número de ficha</label>
+						</div>
+
+						<div class="input-field col s4">
+							<input id="last_name" type="text" class="">
+							<label for="last_name">Número de predio</label>
+						</div>
+
+						<div class="input-field col s4">
+							<input id="last_name" type="number" class="">
+							<label for="last_name">Número de predio</label>
+						</div>
+					</div>
+				</form>
+  			</div>
+		</div>
 	</li>
 	<li>
 		<div class="collapsible-header"><i class="far fa-lg fa-edit" title="Detalles"></i>&nbsp;&nbsp;Identificación</div>

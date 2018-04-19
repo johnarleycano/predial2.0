@@ -1,3 +1,15 @@
+<div class="container">
+	<form class="col s12">
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="fas fa-search prefix"></i>
+				<label for="icon_prefix">Buscar por nombre de predio, propietario</label>
+				<input id="icon_prefix" type="text" autofocus>
+			</div>
+		</div>
+	</form>
+</div>
+
 <div id="btn_agregar" class="fixed-action-btn">
 	<a class="btn-floating btn-large boton_agregar">
 		<i class="fas fa-lg fa-plus" title="Agregar ítem"></i>

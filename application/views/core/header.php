@@ -13,11 +13,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
 
-<!-- <script src="<?php // echo base_url(); ?>js/materialize.min.js"></script> -->
-<!-- <script src="<?php // echo base_url(); ?>js/dataTables/datatables.min.js"></script> -->
+<script src="<?php echo base_url(); ?>js/materialize.min.js"></script>
 
 <!-- <link rel="stylesheet" href="<?php // echo base_url(); ?>css/materialize.min.css" /> -->
-<!-- <link rel="stylesheet" href="<?php // echo base_url(); ?>css/datatables.min.css" /> -->
 
 
 <?php // if(ENVIRONMENT === 'development') { ?>

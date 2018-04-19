@@ -15,7 +15,7 @@ Class Gestion_predial_model extends CI_Model{
                     "CASE WHEN p.Requerido ='1' THEN 'Si' ELSE 'No' END Requerido",
                 )
             )
-            ->limit(5)
+            ->limit(25)
     		->order_by("Pk_Id")
         ;
      

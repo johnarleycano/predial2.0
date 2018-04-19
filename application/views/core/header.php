@@ -1,5 +1,6 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <!-- Título que viene desde el controlador de cada interfaz -->
@@ -7,29 +8,25 @@
 
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 
-<?php if(ENVIRONMENT === 'development') { ?>
-	<!-- Estilos -->
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/datatables.css" />
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/materialize.css" />
+<!-- Materialize -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 
-	<!-- Scripts -->
-	<script src="<?php echo base_url(); ?>js/dataTables/datatables.js"></script>
-	<script src="<?php echo base_url(); ?>js/materialize.js"></script>
-<?php } ?>
 
-<?php if(ENVIRONMENT === 'production') { ?>
-	<!-- Estilos -->
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/datatables.min.css" />
-	<link rel="stylesheet" href="<?php echo base_url(); ?>css/materialize.min.css" />
+<!-- <script src="<?php // echo base_url(); ?>js/materialize.min.js"></script> -->
+<!-- <script src="<?php // echo base_url(); ?>js/dataTables/datatables.min.js"></script> -->
 
-	<!-- Scripts -->
-	<script src="<?php echo base_url(); ?>js/dataTables/datatables.min.js"></script>
-	<script src="<?php echo base_url(); ?>js/materialize.min.js"></script>
-<?php } ?>
+<!-- <link rel="stylesheet" href="<?php // echo base_url(); ?>css/materialize.min.css" /> -->
+<!-- <link rel="stylesheet" href="<?php // echo base_url(); ?>css/datatables.min.css" /> -->
 
-<!-- Datatables select -->
-<script src="https://cdn.datatables.net/select/1.2.5/js/dataTables.select.min.js"></script>
-<link href="https://cdn.datatables.net/select/1.2.5/css/select.dataTables.min.css" rel="stylesheet">
+
+<?php // if(ENVIRONMENT === 'development') { ?>
+
+<?php // } ?>
+
+<?php // if(ENVIRONMENT === 'production') { ?>
+	
+<?php // } ?>
 
 <!-- Fuentes -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">

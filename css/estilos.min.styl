@@ -11,11 +11,9 @@ body
 	font-family 'Raleway', sans-serif
 	// background-color #E9F7EF
 		
-table th
-
 #contenido_principal
 	// background-color #E9F7EF
-	margin-top 120px
+	margin-top 10px
 	margin-bottom 10px
 	min-height 100%
 	text-align center
@@ -30,11 +28,14 @@ table th
 .page-footer
 	background-color color_logo
 
-@media (max-width: 420px)
+@media (min-width: 400px)
 	#contenido_principal
-		margin-top 130px
+		margin-top 10px
 
 @media (min-width: 640px)
+	#contenido_principal
+		margin-top 120px
+		
 	.nav-extended
 		overflow hidden
 		position fixed
@@ -44,3 +45,9 @@ table th
 	top 0
 	padding 50
 	z-index 99
+	
+.ajax-load{
+    background: #e1e1e1;
+    padding: 10px 0px;
+    width: 100%;
+}

@@ -1,9 +1,10 @@
 <div class="container">
     <div id="post-data">
         <?php
+        $this->data["filtro"] = $filtro;
         $this->data["ultimo_id"] = null;
         $this->load->view("gestion_predial/datos", $this->data);
-        ?>
+        ?> 
     </div>
 </div>
 <br>
@@ -20,16 +21,18 @@
     function cargar_mas_datos(ultimo_id){
         $.ajax({
             url: "<?php echo site_url('gestion_predial/cargar_interfaz') ?>",
-            data: {'tipo': 'listado_infinito', 'ultimo_id': ultimo_id},
+            data: {'tipo': 'listado_infinito', 'ultimo_id': ultimo_id, 'filtro': '<?php echo $filtro; ?>'},
             type: "POST",
             beforeSend: function()
             {
                 $('.ajax-load').show()
             }
-        }).done(function(data){
+        })
+        .done(function(data){
             $('.ajax-load').hide()
             $("#post-data").append(data)
-        }).fail(function(jqXHR, ajaxOptions, thrownError){
+        })
+        .fail(function(jqXHR, ajaxOptions, thrownError){
               imprimir('El servidor no responde.')
         })
     }

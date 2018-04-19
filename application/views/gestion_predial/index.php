@@ -3,8 +3,8 @@
 		<div class="row">
 			<div class="input-field col s12">
 				<i class="fas fa-search prefix"></i>
-				<label for="icon_prefix">Buscar por nombre de predio, propietario</label>
-				<input id="icon_prefix" type="text" autofocus>
+				<label for="buscar">Buscar por nombre de predio, propietario</label>
+				<input id="buscar" type="text" autofocus>
 			</div>
 		</div>
 	</form>
@@ -36,13 +36,14 @@
      */
 	function listar()
 	{
-		$("#predios").load("<?php echo site_url('gestion_predial/cargar_interfaz'); ?>", {"tipo": "listado"})
+		$("#predios").load("<?php echo site_url('gestion_predial/cargar_interfaz'); ?>", {"tipo": "listado", "filtro": $("#buscar").val()})
 	}
 
 	$(document).ready(function(){
         $('.fixed-action-btn').floatingActionButton()
+
+        $("#buscar").on("keyup", listar)
 		
 		listar()
-
 	})
 </script>

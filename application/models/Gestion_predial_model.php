@@ -4,10 +4,16 @@ Class Gestion_predial_model extends CI_Model{
         parent::__construct();
     }
 
-    function cargar_predios($id = null)
+    function cargar_predios($id = null, $filtro = null)
     {
         if($id) $this->db->where("Pk_Id >", $id);
-            
+
+
+    $array_like = explode(' ', $filtro);
+    foreach($array_like as $value) {
+            $this->db->like('Ficha_Predial', $value);
+    }
+
         $this->db
             ->select(
                 array(

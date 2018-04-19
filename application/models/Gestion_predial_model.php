@@ -4,17 +4,22 @@ Class Gestion_predial_model extends CI_Model{
         parent::__construct();
     }
 
-    function cargar_predios()
+    function cargar_predios($id = null)
     {
-    	return $this->db
-    		->select(
-    			array(
-    				"p.*",
-    				"CASE WHEN p.Requerido ='1' THEN 'Si' ELSE 'No' END Requerido",
-    			)
-    		)
-    		->get("predios p")
-    		->result();
+        if($id) $this->db->where("Pk_Id >", $id);
+            
+        $this->db
+            ->select(
+                array(
+                    "p.*",
+                    "CASE WHEN p.Requerido ='1' THEN 'Si' ELSE 'No' END Requerido",
+                )
+            )
+            ->limit(5)
+    		->order_by("Pk_Id")
+        ;
+     
+        return  $this->db->get("predios p")->result();
     }
 }
 /* Fin del archivo Inicio_model.php */

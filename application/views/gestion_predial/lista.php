@@ -1,39 +1,37 @@
-<table id="tbl_predios" class="display">
-    <thead>
-        <tr>
-            <th>Ficha predial</th>
-            <th>Primer propietario</th>
-            <th>¿Requerido?</th>
-            <th>Fotos</th>
-            <th>Archivos</th>
-        </tr>
-    </thead>
-    <tbody>
-    	<?php foreach ($this->gestion_predial_model->cargar_predios() as $predio) { ?>
-    		<tr>
-    			<td><?php echo $predio->Ficha_Predial; ?></td>
-    			<td></td>
-    			<td><?php echo $predio->Requerido; ?></td>
-    			<td></td>
-    			<td></td>
-    		</tr>
-    	<?php } ?>
-    </tbody>
-</table>
+<div class="container">
+    <div id="post-data">
+        <?php
+        $this->data["ultimo_id"] = null;
+        $this->load->view("gestion_predial/datos", $this->data);
+        ?>
+    </div>
+</div>
+<br>
+
+<div class="ajax-load progress">
+    <div class="indeterminate"></div>
+</div>
 
 <script type="text/javascript">
-	$(document).ready(function() {
-		$("table tr").on("click", function(){
-			$(this).find('td:first').append("&nbsp;&nbsp;&nbsp;<span></span>")
-			$("span").load("<?php echo site_url('gestion_predial/cargar_interfaz'); ?>", {"tipo": "opciones"})
-		})
+    $(window).scroll(function() {
+        if($(window).scrollTop() + $(window).height() >= $(document).height()) cargar_mas_datos($(".post-id:last").attr("id"))
+    })
 
-    	$('#tbl_predios').DataTable({
-    		"select": "single",
-	        "stateSave": true,
-            "language": {
-		        url: '<?php echo base_url(); ?>js/dataTables/es_CO.json'
-		    }
-		})
-	})
+    function cargar_mas_datos(ultimo_id){
+        $.ajax({
+            url: "<?php echo site_url('gestion_predial/cargar_interfaz') ?>",
+            data: {'tipo': 'listado_infinito', 'ultimo_id': ultimo_id},
+            type: "POST",
+            beforeSend: function()
+            {
+                $('.ajax-load').show()
+            }
+        }).done(function(data){
+            $('.ajax-load').hide()
+            $("#post-data").append(data)
+        }).fail(function(jqXHR, ajaxOptions, thrownError){
+              imprimir('El servidor no responde.')
+        })
+    }
 </script>
+

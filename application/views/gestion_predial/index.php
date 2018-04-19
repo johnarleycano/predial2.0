@@ -1,4 +1,4 @@
-<div class="fixed-action-btn">
+<div id="btn_agregar" class="fixed-action-btn">
 	<a class="btn-floating btn-large boton_agregar">
 		<i class="fas fa-lg fa-plus" title="Agregar ítem"></i>
 	</a>
@@ -10,7 +10,11 @@
 	</ul>
 </div>
 
-<div id="predios"></div>
+<div id="predios">
+	<div class="progress">
+      <div class="indeterminate"></div>
+  </div>
+</div>
 
 <script type="text/javascript">
 	/**
@@ -24,8 +28,9 @@
 	}
 
 	$(document).ready(function(){
+        $('.fixed-action-btn').floatingActionButton()
+		
 		listar()
 
-        $('.fixed-action-btn').floatingActionButton();
 	})
 </script>

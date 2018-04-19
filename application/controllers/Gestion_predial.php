@@ -64,6 +64,11 @@ class Gestion_predial extends CI_Controller {
                     $this->load->view("gestion_predial/lista");
                 break;
 
+                case "listado_infinito":
+                    $this->data["ultimo_id"] = $this->input->post("ultimo_id");
+                    $this->load->view("gestion_predial/datos", $this->data);
+                break;
+
                 case "opciones":
                     $this->load->view("gestion_predial/opciones");
                 break;
